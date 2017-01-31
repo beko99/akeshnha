@@ -1,4 +1,4 @@
---@deve_poent
+--@d_1_t
 --@DEV_s_o
 local function run(msg, matches)
 if matches[1] == 'help' and is_owner(msg) then
