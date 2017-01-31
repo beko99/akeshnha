@@ -1,4 +1,4 @@
---@deve_poent
+--@D_1_T
 --@DEV_s_o
 local function addgroup(msg)
 local group = load_data('bot/group.json')
@@ -55,10 +55,10 @@ end
 end
 return {
   patterns = {
-    "^[/#!](add)$",
-    "^[/#!](rem)$",
-"^!!!edit:[/#!](add)$",
-    "^!!!edit:[/#!](rem)$"
+    "^[/#!](تقعيل)$",
+    "^[/#!](تعطيل)$",
+"^!!!edit:[/#!](تفعيل)$",
+    "^!!!edit:[/#!](تعطيل)$"
   },
   run = run
 }
