@@ -1,4 +1,4 @@
---@deve_poent
+--@D_1_T
 --@DEV_s_o
 local function run(msg, matches)
 
@@ -26,5 +26,5 @@ return {
   run = run
 
 }
---@deve_poent
+--@D_1_T
 --@DEV_s_o
