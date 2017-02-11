@@ -1,4 +1,4 @@
---@D_1_T
+--@deve_poent
 --@DEV_s_o
 local function settings(msg, target,group)
 local group = load_data('bot/group.json')
@@ -433,74 +433,74 @@ end
 local function run(msg, matches)
 local addgroup = group[tostring(msg.chat_id)]
 if addgroup and is_momod(msg) then
-if matches[1] == 'الاعدادات'  then
+if matches[1] == 'settings'  then
 group_settings(msg, msg.chat_id)
-elseif matches[1] == 'قفل' then
-if matches[2] == 'الروابط' then
+elseif matches[1] == 'lock' then
+if matches[2] == 'lin' then
 lock_group_links(msg, msg.chat_id)
-elseif matches[2] == 'التعديل' then
+elseif matches[2] == 'ed' then
 lock_group_edit(msg, msg.chat_id)
-elseif matches[2] == 'الغريب' then
+elseif matches[2] == 'fh' then
 lock_group_fosh(msg, msg.chat_id)
-elseif matches[2] == 'الانلاين' then
+elseif matches[2] == 'in' then
 lock_group_inline(msg, msg.chat_id)
-elseif matches[2] == 'الملصقات' then
+elseif matches[2] == 'sti' then
 lock_group_sticker(msg, msg.chat_id)
-elseif matches[2] == 'التوجيه' then
+elseif matches[2] == 'fwd' then
 lock_group_fwd(msg, msg.chat_id)
-elseif matches[2] == 'اليوزر' then
+elseif matches[2] == 'use' then
 lock_group_username(msg, msg.chat_id)
-elseif matches[2] == 'السبام' then
+elseif matches[2] == 'spa' then
 lock_group_spam(msg, msg.chat_id)
 end
-elseif matches[1] == 'فتح' then
-if matches[2] == 'الروابط' then
+elseif matches[1] == 'unlock' then
+if matches[2] == 'lin' then
 unlock_group_links(msg, msg.chat_id,group )
-elseif matches[2] == 'التعديل' then
+elseif matches[2] == 'ed' then
 unlock_group_edit(msg, msg.chat_id)
-elseif matches[2] == 'الغريب' then
+elseif matches[2] == 'fh' then
 unlock_group_fosh(msg, msg.chat_id)
-elseif matches[2] == 'الملصقات' then
+elseif matches[2] == 'sti' then
 unlock_group_sticker(msg, msg.chat_id)
-elseif matches[2] == 'التوجيه' then
+elseif matches[2] == 'fwd' then
 unlock_group_fwd(msg, msg.chat_id)
-elseif matches[2] == 'اليوزر' then
+elseif matches[2] == 'use' then
 unlock_group_username(msg, msg.chat_id)
-elseif matches[2] == 'الانلاين' then
+elseif matches[2] == 'in' then
 unlock_group_inline(msg, msg.chat_id )
-elseif matches[2] == 'السبام' then
+elseif matches[2] == 'spa' then
 unlock_group_spam(msg, msg.chat_id)
 end
-elseif matches[1] == 'قفل' then
-if matches[2] == 'الكل' then
+elseif matches[1] == 'mute' then
+if matches[2] == 'all' then
 mute_all_group(msg, msg.chat_id)
-elseif matches[2] == 'الصور' then
+elseif matches[2] == 'pho' then
 mute_photo_group(msg, msg.chat_id)
-elseif matches[2] == 'الملفات' then
+elseif matches[2] == 'doc' then
 mute_document_group(msg, msg.chat_id)
-elseif matches[2] == 'المتحركه' then
+elseif matches[2] == 'gif' then
 mute_gif_group(msg, msg.chat_id)
-elseif matches[2] == 'الموسيقى' then
+elseif matches[2] == 'aud' then
 mute_audio_group(msg, msg.chat_id)
-elseif matches[2] == 'الصوت' then
+elseif matches[2] == 'voi' then
 mute_voice_group(msg, msg.chat_id)
-elseif matches[2] == 'الفديو' then
+elseif matches[2] == 'vid' then
 mute_video_group(msg, msg.chat_id)
 end
-elseif matches[1] == 'فتح' then
-if matches[2] == 'الكل' then
+elseif matches[1] == 'unmute' then
+if matches[2] == 'all' then
 unmute_all_group(msg, msg.chat_id,group )
-elseif matches[2] == 'الصور' then
+elseif matches[2] == 'pho' then
 unmute_photo_group(msg, msg.chat_id)
-elseif matches[2] == 'الملفات' then
+elseif matches[2] == 'doc' then
 unmute_document_group(msg, msg.chat_id)
-elseif matches[2] == 'المتحركه' then
+elseif matches[2] == 'gif' then
 unmute_gif_group(msg, msg.chat_id)
-elseif matches[2] == 'الموسيقى' then
+elseif matches[2] == 'aud' then
 unmute_audio_group(msg, msg.chat_id)
-elseif matches[2] == 'الصوت' then
+elseif matches[2] == 'voi' then
 unmute_voice_group(msg, msg.chat_id)
-elseif matches[2] == 'الفيديو' then
+elseif matches[2] == 'vid' then
 unmute_video_group(msg, msg.chat_id)
 end
 end
@@ -508,18 +508,18 @@ end
 end
 return {
   patterns = {
-    "^[/#!](قفل) (.*)$",
-    "^[/#!](فتح) (.*)$",
-    "^[/#!](قفل) (.*)$",
-	"^[/#!](فتح) (.*)$",
-	"^[/#!](الاعدادات)$",
-"^!!!edit:[/#!](قفل) (.*)$",
-"^!!!edit:[/#!](فتح) (.*)$",
-"^!!!edit:[/#!](قفل) (.*)$",
-"^!!!edit:[/#!](فتح) (.*)$",
-"^!!!edit:[/#!](الاعدادات)$",
+    "^[/#!](lock) (.*)$",
+    "^[/#!](unlock) (.*)$",
+    "^[/#!](mute) (.*)$",
+	"^[/#!](unmute) (.*)$",
+	"^[/#!](settings)$",
+"^!!!edit:[/#!](lock) (.*)$",
+"^!!!edit:[/#!](unlock) (.*)$",
+"^!!!edit:[/#!](mute) (.*)$",
+"^!!!edit:[/#!](unmute) (.*)$",
+"^!!!edit:[/#!](settings)$",
   },
   run = run
 }
---@D_1_T
+--@deve_poent
 --@DEV_s_o
