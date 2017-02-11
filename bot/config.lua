@@ -8,6 +8,12 @@ do local _ = {
     "msg_checks",
     "help",
     "tools",
+    "banall",
+    "mee",
+    "mas",
+    "pli",
+    "sudo",
+    "sub",
   },
   group  = {
     data = "bot/group.json"
